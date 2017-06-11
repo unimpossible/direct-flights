@@ -1,0 +1,19 @@
+version: '2'
+services:
+  flight-app:
+    build: ./flightApp
+    container_name: flight_app
+    ports:
+      - "3000:3000"
+    links:
+      - db:db
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=db
+      - NPM_MODE=test
+    volumes:
+      - ./flightApp:/usr/src/app
+    
+  db:
+    build: ./flightdb

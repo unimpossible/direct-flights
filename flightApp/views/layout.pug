@@ -1,0 +1,12 @@
+extends ../node_modules/pug-bootstrap/_bootstrap
+block body
+  #wrap
+    .container
+        .content
+          block content
+block scripts
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+  script(src="https://fastcdn.org/Underscore.js/1.8.3/underscore-min.js")
+  script(src="/javascripts/selectize/selectize.js")
+  script(src="/javascripts/global.js")

@@ -1,0 +1,30 @@
+extends layout
+
+block append styles
+    link(rel="stylesheet",href="/css/selectize/selectize.bootstrap3.css")
+
+block content
+  h1= title
+  p Pick an airport, get a list of direct flights. That is all!
+  #wrapper
+    //button.btn.btn-primary(data-toggle="modal", data-target="#theModal") Clickem
+    // airport list
+    div.form-group
+      select#airportSearchbox.form-control(name="airportSearchbox", placeholder="Search Airport Names")
+    //div#airportList
+    //  table.table.table-striped#airportTable
+    //    thead
+    //      th Airport Code
+    //      th Airport Name
+    //    tbody
+    // /airport list
+    div#flightList
+      table.table.table-striped#flightTable
+        thead
+          th Destination
+          th Airline
+        tbody
+
+  // /wrapper
+block append scripts
+    script(src="/javascripts/index.js")

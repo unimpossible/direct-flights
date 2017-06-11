@@ -1,0 +1,9 @@
+table.table.table-striped#airportTable
+  thead
+    th Airport Code
+    th Airport Name
+  tbody
+    each airport in airports
+      tr(data-toggle="modal", href="#airportDisplayModal", data-target="#theModal")
+        td.airportcode=airport.iata
+        td=airport.name
